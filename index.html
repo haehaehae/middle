@@ -1,0 +1,251 @@
+<idoctype html>
+<head>
+	<meta charset = "utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='normalize.css' rel="stylesheet">
+	<script src="scrollByAnimated.js"></script>
+	<link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+
+	<style>
+		html { font-family: 'Spoqa Han Sans'; font-weight: 200;}
+		body{ background:black;}
+		header {width:1024px; height:44px; position: fixed;left:calc(50% - 480px);z-index: 9999;}
+		header #logo {float:left;  width:150px;height:44px;line-height: 44px;text-align: center;color:#00E676;font-size: 0.8em;font-weight:400;}
+		header #menu {float:right; width:1024px;}
+		header #menu li{float:left; width:100px; height: 44px; line-height:44px;text-align: center;color:#00E676;font-size: 0.8em;font-weight:400;cursor:pointer;}
+		header #menu li:hover{background: #8684D8}
+		section,footer{width:1024px; height:764px; margin:0 auto;position: relative}
+		section h2{color:black; font-size: 0.9em; font-weight:600; position: absolute;line-height: 1.5; text-align: left; }
+		section p{color:black; font-size: 0.7em; font-weight:100; position: absolute;line-height: 1.5;width:350px; text-align: left;}
+		footer h2{color:white; font-size: 3em; line-height: 600px;}
+		svg {position: fixed;z-index: 9999}
+		section svg{position: absolute;}
+
+		#s1{background:url('./img/back-1.png');}
+		#logotext{padding-top:100px; margin-left:350px; position: relative;}
+		#s1 h2{left:400px; top:200px;}
+		#neddle{ margin-top:2%; left:calc(50% - 270px); z-index: 3;}
+
+		#lp1{margin-top: 26%; margin-left:calc(50% - 200px); z-index: 2; 
+			animation:lp1Move 5s infinite linear running;}
+
+			@keyframes lp1Move{
+			0%{ top:0px; left:0px; transform: rotateZ(0deg)}
+			100%{ top:0px; left:0px; transform: rotateZ(1018deg);}
+			}
+			#player{ padding-top: 2%; width:50%; left:calc(50% - 270px); z-index: 1;}
+
+		#s2{background:url(./img/back-2.png);}
+		#s2 h2{left:200px; top:200px;}
+		#s2 p{left:200px; top:280px;}
+		#s2 svg{left: 10px;}
+		#video{position: relative;}
+
+
+		#s3{background:url('./img/back-3.png');}
+		#draggable {width: 500px; height:300px; position:absolute;  margin-left: 400px; margin-top:300px;}
+		#draggable2 {width: 500px; height:300px; position:absolute;  margin-left: 600px; margin-top:100px;}
+
+
+
+
+		#s3 h2{left:600px; top:230px; font-size: 2em; }
+		
+		#circle{margin-left:350px; margin-top:360px;width: 600px; background:blue; height: 200px; border-width: 5px; border-color: solid black; border-radius: 100%; position:relative; z-index: 3;}
+		#circle p{padding:100px;position:absolute; font-size: 1.5em; color: white; padding-top: 50px; text-align: center; z-index: 5;}
+		#big{width: 450px; margin-left: 550px; padding-top: 10px; position:absolute; z-index: 1;}
+		#big img{width: 100%;}
+
+
+		#s4{background:url('./img/back-4.png'); background-size: 100% auto;}
+		#s4 h2{left:400px; top:200px;}
+		
+		
+		#s5{background:blue;}
+
+			#container{width: 800px; align-content: center; padding: 100px; padding-top: 200px;}
+
+			#yeek{ background: url(./img/yeek.png); background-size: 100%; background-repeat: no-repeat; width: 40%; height: 400px; position:absolute ; left:100px; border:4px solid black;}
+
+			#interview{background: white;  width: 30%; height: 350px;border: 4px solid black; display:inline-block; float: left; padding: 50px; position:absolute ; right:100px; padding:40px; float: left;s}
+		#s5 h2{margin: 10px;}
+		#s5 p{width :300px; margin: 10px; padding-top: 80px;}
+		#s5 img{width: 50px; position: absolute; bottom: 0px; right:0px;}
+
+		
+		#s6{background:white;}
+		#text6{margin-left: 10px; padding-top: 100px;}
+		#s6 h2{font-size: 1em; left:350px; top:180px; }
+		#s6 p{left:350px; top:180px;}
+		#s6all{text-align: center; ; margin-left: 150px; padding-top: 100px; margin-right: 120px;}
+		#bookmark{width: 35%; float: left;}
+		#cloud{position: relative; width: 50%; right: 0px; float: left; margin-left: 100px;}
+		#s6 img{width: 65%; padding-top: 1px;}
+
+		footer{background: white;}
+		footer{text-align: center;}
+
+		#t1{transition: all 1s;}
+		#t2{transition: all 1s;}
+		#t3{transition: all 1s;}
+		#t4{transition: all 1s;}
+		#t5{transition: all 1s;}
+		#t6{transition: all 1s;}
+
+		
+
+	</style>
+</head>
+<body>
+	<header>
+		<div id="logo">
+			soundroom #Yeek
+		</div>
+		<ul id="menu">
+			<a href="#s1"><li id="m1">top</li>
+			<a href="#s2"><li id="m2">&diams;</li>
+			<a href="#s3"><li id="m3">&diams;</li>
+			<a href="#s4"><li id="m4">&diams;</li>
+			<a href="#s5"><li id="m5">&diams;</li>
+			<a href="#s6"><li id="m6">end</li>
+		</ul>
+	</header>
+	<section id="s1">
+	        <div id= "main2" >
+	            	<div id="logotext">
+	            		<img src="./img/logo.png"></div>
+            	</div>
+				<div class="neddle" id="neddle" style="position: absolute;"> <img src="./img/neddle.png" ></div>
+            	<div class="player" id="player" style="position: relative;"><img src="./img/player.png"></div>
+
+				<img src="./img/lp1.png" id="lp1" style="position: absolute;">
+            </div>
+	</section>
+	<section id="s2">
+			<div  align="center">
+				<video autoplay id="video1" style="padding-top: 100px;"><source src="./img/video1.mp4" type="video/mp4"></video>
+			</div>
+		</svg>
+	</section>
+	<section id="s3">
+		<div id="draggable" class="ui-widget-content">
+			<p><img src="./img/shake.gif" style="width: 100%;"></p>
+		</div>
+		<div id="draggable2" class="ui-widget-content">
+			<p><img src="./img/shake.gif" style="width: 100%;"></p>
+		</div>
+		<div id="big"><img src="./img/big_icon.png"></div>
+		<h2> He is Yeek</h2>
+		<div id="circle" style="position: absolute;" class="ui-widget-content">
+			<p>"I like to say it's experimental indie punk with hip-hop undertones,"</p>
+		</div>
+	</section>
+	<section id="s4">
+		<img src="./img/rose4.png" style="width: 300px; margin-left: 30px; position: absolute; margin-top: 80px;" >
+		<img src="./img/rose3.png" style="width: 300px; margin-left: 700px; position: absolute; margin-top: 80px;" >
+		<img src="./img/rose2.png" style="width: 300px; margin-left: 100px; position: absolute; margin-top: 480px;" >
+		<img src="./img/rose1.png" style="width: 150px; margin-left: 800px; position: absolute; margin-top: 600px;" >
+		
+		<div  align="center">
+				<video id="video2" style="margin-top: 180px;"><source src="./img/video2.mp4" type="video/mp4"></video>
+			</div>
+	</section>
+	<section id="s5">
+		<div id="container">
+		<div align="center" id="yeek"></div>
+		<div align="center" id="interview">
+
+			<h2>How do you feel about people trying to label you as an "Asian rapper"? Do you feel that there's a lack of representation of Asian-Americans in music?</h2>
+			<br>
+			<p>That's never really something that I thought about.
+			<br> Like, "Ah, I'm an Asian-American and I rap." 
+			I feel like we <br>live in a time that's open and filled 
+			with individuals who <br>are just themselves. I feel like we've grown as a creative <br>community to not base things 
+			off skin color or ethnicity <br>but to base things off the
+			work. It's rare that someone <br>says to me, "Oh, you're like an Asian singer" or "You're <br>like an Asian rapper." 
+			They are like, "Oh, he's a dope <br>artist." I feel like 
+			with rapping and singing those are just <br>other 
+			instruments like the drums or keyboard that I know <br>how to play. Yeah, it is true that Asians are often behind <br>the scenes of the mainstream but I feel like now is the <br>time to change that perception.
+			</p>
+			<a href="https://i-d.vice.com/en_us/article/bjnx9v/meet-genre-bending-artist-yeek-and-watch-his-new-video-about-young-love" target="_blank" title="인터뷰보러가기"><img src="./img/icon.png">
+		</div>
+	</div>
+	
+	</section>
+	<section id="s6">
+		<div id="text6">
+		<h2>YEEK LINK </h2>	</div>
+		<div id="s6all">
+			<div id="bookmark">
+				<a href="http://theyeeks.com" title="yeek_home"><img src="./img/icon.png"></a>
+				<a href="https://www.youtube.com/user/mynameisyeek" title="	youtube"><img src="./img/icon.png"></a>
+				<a href="https://www.instagram.com/imyeek/" title="instagram"><img src="./img/icon.png"></a>
+			</div>
+			<div id="cloud">
+					<iframe width="100%" height="500" scrolling="no" frameborder="2px" float=left; src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/2486291&amp;color=%2300ff29&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+			</div>
+		</div>
+
+
+	</section>
+	
+	<script>
+
+			var state = "stop";
+		lp1.onclick = function()
+		{
+			console.log("clicked!!");
+			if(state == "stop"){
+				lp1.style.animationPlayState = "running";
+				state = "play";}
+			else{
+				lp1.style.animationPlayState = "paused";}
+		}
+
+
+
+		window.onscroll = function(){
+		console.log(document.body.scrollTop);
+		var scrollH = document.body.scrollTop;
+
+		if(scrollH > 637){ //: s1
+			 video1.play();
+			m1.style.background = "#00E676";
+		}else{
+		}
+
+		if(scrollH > 639){ //s1
+			m2.style.background = "#00E676";
+		}else{
+
+		}
+
+		if(scrollH > 1500){ //s2
+			video1.pause();
+			m3.style.background = "#00E676";
+		}else{
+		}
+
+		if(scrollH > 2149){//s3
+			
+			video2.play();
+			m4.style.background = "#00E676";
+
+		}else{
+			video2.pause(); //s4
+		}
+
+		if(scrollH > 3040){ //s5
+			m5.style.background = "#00E676";
+		}else{
+			
+		}
+		if(scrollH > 3752){ //s6
+			m6.style.background = "#00E676";
+		}else{
+			
+		}
+
+	}
+	</script>
+</body>
